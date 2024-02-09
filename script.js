@@ -110,32 +110,33 @@ function getPasswordOptions() {
     options.sc = confirm("Click OK to confirm including special characters");
     if (options.n === true){
     
-    arr += arr.concat(numericCharacters);
+    arr = arr.concat(numericCharacters);
     
     }
     
     if (options.lc === true){
       
-      arr += arr.concat(lowerCasedCharacters);
+      arr = arr.concat(lowerCasedCharacters);
       
       }
       
       if (options.uc === true){
         
-        arr += arr.concat(upperCasedCharacters);
+        arr = arr.concat(upperCasedCharacters);
         
         }
         
         if (options.sc === true){
         
-          arr += arr.concat(specialCharacters);
+          arr = arr.concat(specialCharacters);
           
           }
           
     
 
   } else {
-    prompt("Password length must be at least 8 characters and less than 128 characters.");
+    alert("Password length must be at least 8 characters and less than 128 characters.");
+    writePassword();
   }
 
   return arr;
@@ -156,7 +157,7 @@ for (var i=0; i<num; i++){
   pwd[i] = getRandom();
 }
 
-return pwd;
+return pwd.join("");
 }
 
 // Get references to the #generate element
@@ -164,6 +165,7 @@ var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
+  getPasswordOptions();
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
 
@@ -172,5 +174,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
-
-getPasswordOptions();
