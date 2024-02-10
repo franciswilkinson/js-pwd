@@ -9,10 +9,9 @@ A project to use Javascript objects, functions and methods.
 - Commented Javascipt files.
 - Published at [(https://franciswilkinson.github.io/js-pwd/)]
 
-![js-pwd](https://github.com/franciswilkinson/js-pwd/blob/main/images/Screenshot1.png "js-pwd")
+## Screenshot
 
-![js-pwd](https://github.com/franciswilkinson/js-pwd/blob/main/images/Screenshot2.png "js-pwd")
-
+![js-pwd](https://github.com/franciswilkinson/js-pwd/blob/main/images/Screenshot.png "js-pwd")
 
 ## Installation
 
