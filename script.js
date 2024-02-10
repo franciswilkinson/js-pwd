@@ -124,12 +124,18 @@ function getPasswordOptions() {
     if (options.sc === true){
       arr = arr.concat(specialCharacters);
       }
+    if (options.n === false && options.uc === false && options.sc === false && options.lc === false ) {
+      alert("You must choose at least one character type. Try again!");
+      writePassword();
+    }
     
 
   } else {
     alert("Password length must be at least 8 characters and less than 128 characters.");
     writePassword();
   }
+
+  
 
   return arr;
 }
