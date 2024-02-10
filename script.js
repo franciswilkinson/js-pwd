@@ -102,37 +102,27 @@ var pwd = [];
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+  //Clears arrays each time function is called.
   arr = [];
   pwd = [];
   num = prompt("How many characters would you like your password to contain?");
   if (num >= 8 && num <= 128) {
-    console.log(options.n);
+
     options.n = confirm("Click OK to confirm including numeric characters");
     if (options.n === true){
-      console.log(options.n);
       arr = arr.concat(numericCharacters);
-      console.log(arr);
-      
       }
-      console.log(arr);
     options.lc = confirm("Click OK to confirm including lowercase characters");
     if (options.lc === true){
-      console.log(options.lc);
       arr = arr.concat(lowerCasedCharacters);
-      console.log(arr);
-      
       }
     options.uc = confirm("Click OK to confirm including uppercase characters");
     if (options.uc === true){
-        
       arr = arr.concat(upperCasedCharacters);
-      
       }
     options.sc = confirm("Click OK to confirm including special characters");
     if (options.sc === true){
-        
       arr = arr.concat(specialCharacters);
-      
       }
     
 
