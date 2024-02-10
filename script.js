@@ -90,48 +90,50 @@ var upperCasedCharacters = [
 
 var arr = [];
 
-  var options = [{
-   sc: 0,
-   lc: 0,
-   uc: 0,
-   n: 0,
-  }];
+var options = [{
+  sc: 0,
+  lc: 0,
+  uc: 0,
+  n: 0,
+}];
 
 var num = 0;
 var pwd = [];
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+  arr = [];
+  pwd = [];
   num = prompt("How many characters would you like your password to contain?");
   if (num >= 8 && num <= 128) {
+    console.log(options.n);
     options.n = confirm("Click OK to confirm including numeric characters");
-    options.lc = confirm("Click OK to confirm including lowercase characters");
-    options.uc = confirm("Click OK to confirm including uppercase characters");
-    options.sc = confirm("Click OK to confirm including special characters");
     if (options.n === true){
-    
-    arr = arr.concat(numericCharacters);
-    
-    }
-    
-    if (options.lc === true){
-      
-      arr = arr.concat(lowerCasedCharacters);
+      console.log(options.n);
+      arr = arr.concat(numericCharacters);
+      console.log(arr);
       
       }
+      console.log(arr);
+    options.lc = confirm("Click OK to confirm including lowercase characters");
+    if (options.lc === true){
+      console.log(options.lc);
+      arr = arr.concat(lowerCasedCharacters);
+      console.log(arr);
       
-      if (options.uc === true){
+      }
+    options.uc = confirm("Click OK to confirm including uppercase characters");
+    if (options.uc === true){
         
-        arr = arr.concat(upperCasedCharacters);
+      arr = arr.concat(upperCasedCharacters);
+      
+      }
+    options.sc = confirm("Click OK to confirm including special characters");
+    if (options.sc === true){
         
-        }
-        
-        if (options.sc === true){
-        
-          arr = arr.concat(specialCharacters);
-          
-          }
-          
+      arr = arr.concat(specialCharacters);
+      
+      }
     
 
   } else {
